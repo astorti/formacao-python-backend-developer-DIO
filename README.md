@@ -77,3 +77,28 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
     - extensões VSCode
         - Black Formatter (Microsoft)
         - isort (Microsoft)
+
+- **Banco de Dados Relacionais**
+
+    - Fundamentos
+        - tabelas
+        - chaves primárias
+        - chaves estrangeiras
+        - SQL (**S**tructured **Q**uery **L**anguage)
+    - Conexão Banco de Dados
+        - Python DB API
+            - SQLite
+                ```
+                import sqlite3
+                conexao = sqlite3.connect('nome_banco_de_dados.bd)
+                ```
+            - metodos
+                - execute()
+                - commit()
+                - executemany()
+                - fetchone()
+                - fetchall()
+                - rollback()
+            - row_factory
+            - classe Row
+            - tratamento de exceções
