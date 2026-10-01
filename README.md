@@ -40,6 +40,8 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
             - instalação
                 - instalação recomendada para Ubuntu 24.04
                     - `sudo apt install pipenv`
+                - instalação para Arch Linux e derivados
+                    - `sudo pacman -S python-pipenv`
                 - instalação do pipenv em ambiente global
                     - `pip install pipenv`
             - comandos básicos pipenv:
@@ -50,16 +52,19 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
                 - `pipenv clean`: remove dependências não referenciadas no arquivo lock
         - **Poetry**
             - instalação
-                - instalação recomendada para Ubuntu 24.04
-                    - `sudo apt install pipx`
+                - instalação recomendada para Linux
+                    - Ubuntu: `sudo apt install pipx`
+                    - Arch Linux: `sudo pacman -S python-pipx`
                     - `pipx ensurepath`: garante que o sistema encontre os executáveis do pipx e dos pacotes instalados com ele 
                     - `pipx install poetry`
-                - instalação do pipenv em ambiente global
+                - instalação do poetry em ambiente global
                     - `pip install poetry`
             - comandos básicos Poetry:
                 - `poetry new nome_do_projeto`
                 - `poetry add nome_da_dependência`
                 - `poetry remove nome_da_dependência`
+                - `poetry init`: para criar o arquivo `pyproject.toml` manualmente
+                - `poetry env remove --all`: para excluir um ambiente virtual
 
 - **Boas Práticas**
     - PEP 8
@@ -120,6 +125,42 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
             - permite que seja especificado quais dados serão solicitados
             - reduz solicitações e tamanho dos dados transferidos
             - flexível e fortemente tipada
+
+- **FastAPI**
+
+    - **Objetivo:** desenvolvimento de APIs REST modernas, com foco em alto desempenho e programação assíncrona.
+    - **Origem:** criado por Sebastián Ramírez e lançado em dezembro de 2018.
+    - **Base:** utiliza OpenAPI e JSON Schema.
+    - **Tipagem:** utiliza tipagem estática para validação de dados e geração automática de documentação.
+    - **Validação:** utiliza Pydantic para validação e serialização de dados.
+
+    - **Pontos positivos:**
+
+        - Alto desempenho.
+        - Suporte nativo a `async/await`.
+        - Validação e serialização automáticas.
+        - Geração automática de documentação com OpenAPI.
+        - Fácil de aprender e utilizar.
+        - Adequado para operações de I/O assíncronas.
+
+    - **Pontos negativos:**
+
+        - Comunidade menor que a de frameworks mais estabelecidos, como Django.
+        - Menor maturidade e quantidade de plugins.
+        - Pode apresentar maior complexidade em projetos grandes.
+        - Tipagem estrita e programação assíncrona podem exigir maior adaptação.
+
+    - **Instalação e configuração**
+
+        - Utilizando o ambiente de virtual Poetry
+            - Com terminal aberto na pasta do projeto, digitar o comando: `poetry init` e seguir as configurações do arquivo `pyproject.toml`
+            - Instalar o FastAPI com o comando: `poetry add fastapi` ou `poetry add 'fastapi=*'`
+            - Para confirmar a criação do ambiente virtual: `poetry env info`
+            - Para verificar o comando de ativação: `poetry env activate`
+            - Rodar o comando de ativação fornecido no comando anterior: `source....`
+            - Instalar o uvicorn: `poetry add "uvicorn[standard]"`
+            - Para sair do ambiente virtual digitar o comando: `deactivate`
+
 
 - **Desafios de Códigos**
 
