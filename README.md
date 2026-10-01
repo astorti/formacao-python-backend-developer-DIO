@@ -161,6 +161,16 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
             - Instalar o uvicorn: `poetry add "uvicorn[standard]"`
             - Para sair do ambiente virtual digitar o comando: `deactivate`
 
+    - **Conceitos desenvolvidos**
+        - Rotas e endpoints
+            - Path Parameter
+            - Query Parameter
+            - Request Body
+            - Cookies
+            - Headers
+        - Response Model
+
+---
 
 - **Desafios de Códigos**
 
