@@ -169,6 +169,7 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
             - Cookies
             - Headers
         - Response Model
+        - APIRouter
 
 ---
 
