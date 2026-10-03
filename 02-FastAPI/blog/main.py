@@ -1,13 +1,7 @@
 from fastapi import FastAPI
 from controllers import post
-import sqlalchemy as sa
-from sqlalchemy.ext.asyncio import create_async_engine
 from contextlib import asynccontextmanager
-
-DATABASE_URL = "sqlite+aiosqlite:///blog.db"
-
-metadata = sa.MetaData()
-engine = create_async_engine(DATABASE_URL)
+from database import metadata, engine
 
 async def create_tables():
     async with engine.begin() as conn:
