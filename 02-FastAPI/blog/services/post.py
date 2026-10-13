@@ -1,8 +1,8 @@
-from fastapi import HTTPException, status
 from sqlalchemy import func, select
 from database import engine
 from models.post import posts
 from schemas.post import PostIn, PostUpdateIn
+from exceptions import NotFoundPostError
 
 
 class PostService:
@@ -44,10 +44,7 @@ class PostService:
         total = await self.count(id)
 
         if not total:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="Post not found"
-            )
+            raise NotFoundPostError()
 
         data = post.model_dump(exclude_unset=True)
 
@@ -87,9 +84,6 @@ class PostService:
             post = result.mappings().first()
 
         if not post:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="Post not found"
-            )
+            raise NotFoundPostError()
 
         return post
