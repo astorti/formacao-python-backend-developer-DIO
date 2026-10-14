@@ -1,19 +1,8 @@
 from fastapi import FastAPI, Request
 from controllers import post
-from contextlib import asynccontextmanager
-from database import metadata, engine
 from fastapi.responses import JSONResponse
 from exceptions import NotFoundPostError
 
-async def create_tables():
-    async with engine.begin() as conn:
-        await conn.run_sync(metadata.create_all)
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    from models import post
-    await create_tables()
-    yield
 
 tags_metadata = [
     {
@@ -27,7 +16,6 @@ servers = [
 ]
 
 app = FastAPI(
-    lifespan=lifespan,
     title="Blog API com FastAPI",
     version="1.2.0",
     summary="API para blog pessoal.",

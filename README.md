@@ -170,6 +170,12 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
             - Headers
         - Response Model
         - APIRouter
+        - Conexão assíncrona com banco de dados
+        - Desenvolvimento das operações CRUD
+        - Tratamento de erros
+        - Documentação da API (Swagger)
+        - Configuração do pacote pydentc-settings
+        - Configuração do Alembic para migrations
 
 ---
 
