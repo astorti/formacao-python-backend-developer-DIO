@@ -1,0 +1,13 @@
+# Ambiente virtual
+.venv/
+
+# Banco de dados SQLite
+*.sqlite3
+*.db
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.py[cod]
+
+# Variáveis de ambiente
+.env
