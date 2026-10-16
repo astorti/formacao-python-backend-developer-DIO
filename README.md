@@ -177,32 +177,38 @@ Repositório para implementação e estudo dos códigos desenvolvidos durante o 
         - Configuração do pacote pydentc-settings
         - Configuração do Alembic para migrations
 
-### Django
+- **Django**
 
-- História e propósito
-    - Framework web de alto nível, lançado em 2005.
-    - Criado por Adrian Holovaty e Simon Willison para simplificar o desenvolvimento de aplicações web.
-    - Nome inspirado no músico de jazz Django Reinhardt.
-    - Permite focar na lógica de negócios, reduzindo a necessidade de configurações manuais.
+    - **História e propósito**
+        - Framework web de alto nível, lançado em 2005.
+        - Criado por Adrian Holovaty e Simon Willison para simplificar o desenvolvimento de aplicações web.
+        - Nome inspirado no músico de jazz Django Reinhardt.
+        - Permite focar na lógica de negócios, reduzindo a necessidade de configurações manuais.
 
-- Benefícios
-    - Aumenta a produtividade com componentes reutilizáveis.
-    - Oferece recursos integrados de autenticação, administração e formulários.
-    - Inclui mecanismos de segurança contra ataques comuns.
-    - Possui comunidade ativa e ampla documentação.
+    - **Benefícios**
+        - Aumenta a produtividade com componentes reutilizáveis.
+        - Oferece recursos integrados de autenticação, administração e formulários.
+        - Inclui mecanismos de segurança contra ataques comuns.
+        - Possui comunidade ativa e ampla documentação.
 
-- Limitações
-    - Pode apresentar uma curva de aprendizado elevada.
-    - Conceitos como ORM e sistema de templates exigem compreensão.
-    - Pode ser excessivo para projetos pequenos.
-    - Sua estrutura pode limitar personalizações específicas.
-    - Aplicações em tempo real ou com alta concorrência podem exigir recursos e configurações adicionais.
+    - **Limitações**
+        - Pode apresentar uma curva de aprendizado elevada.
+        - Conceitos como ORM e sistema de templates exigem compreensão.
+        - Pode ser excessivo para projetos pequenos.
+        - Sua estrutura pode limitar personalizações específicas.
+        - Aplicações em tempo real ou com alta concorrência podem exigir recursos e configurações adicionais.
 
-- **Instalação e configuração**
-    - Utilizando o ambiente de virtual Poetry
-        - Com terminal aberto na pasta do projeto, digitar o comando: `poetry init` e seguir as configurações do arquivo `pyproject.toml`
-        - Instalar o Django com o comando: `poetry add django` ou `poetry add 'django=*'`
-        - Para confirmar a criação do ambiente virtual: `poetry env info`
+    - **Instalação e configuração**
+        - Utilizando o ambiente de virtual Poetry
+            - Com terminal aberto na pasta do projeto, digitar o comando: `poetry init` e seguir as configurações do arquivo `pyproject.toml`
+            - Instalar o Django com o comando: `poetry add django` ou `poetry add 'django=*'`
+            - Para confirmar a criação do ambiente virtual: `poetry env info`
+    
+    - **Comando básicos**
+        - rodar o projeto: `python manage.py runserver`
+        - criar migration: `python manage.py makemigrations`
+        - salvar migration: `python manage.py makemigrations`
+        - acessar shell do ipython: `poetry run ./manage.py shell -i ipython`
 ---
 
 - **Desafios de Códigos**
